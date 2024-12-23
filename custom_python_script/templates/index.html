@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Python Script</title>
+</head>
+<body>
+    <h1>Forms</h1>
+    <a href="{% url 'results' %}">Click me</a>
+
+    <form action="{% url 'results' %}">
+        {% csrf_token %}
+        <input type="text" name="user_name" placeholder="Enter your name" required>
+        <input type="submit" value="submit">
+    </form>
+    
+</body>
+</html>
